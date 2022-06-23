@@ -1,0 +1,23 @@
+@import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./base/reset";
+@import "./base/common";
+
+
+@import "./modal/backdrop";
+@import "./modal/modal-input";
+@import "./modal/checkbox";
+@import "./modal/btn-modal";
+
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/details";
+@import "./components/about";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/footer-connect";
+
+@import "./components/portf-button";
+@import "./components/portf-gallery";

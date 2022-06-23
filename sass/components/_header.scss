@@ -1,0 +1,119 @@
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+
+.header__container {
+    display: flex;
+}
+
+/* WebStudio */
+.logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    &:hover {color: var(--accent-color);
+        @extend %animation;}
+}
+
+.header__logo {
+    margin-right: 84px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.logo__style {
+    color: var(--accent-color);
+}
+
+.logo--dark {
+    color: var(--title-text-color);
+}
+
+
+/*_____nav____*/
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.site-nav,
+.contakt {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.site-nav li:not(:last-child),
+.contakt li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contakt {
+    align-items: center;
+    margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-nav__link {
+    color: var(--title-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    &:hover,
+        &:focus {color: var(--accent-color);
+            @extend %animation;}
+}
+
+.site-nav__link.current {
+    color: var(--accent-color);
+    @extend %animation;
+    &::after {content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: #2196f3;
+        border-radius: 2px;
+        position: absolute;
+        bottom: -1.5px;
+        opacity: 1;
+        transition-property: transform background opacity;
+        @extend %animation;
+        transform: scaleX(1);}
+}
+
+
+.contakt a {
+    @extend %align-list;
+    color: var(--contakt-color);
+    &:hover,
+        &:focus {@extend %animation;
+        color: var(--accent-color);}
+}
+
+.contakt__icon-mail,
+.contakt__icon-tel {
+    margin-right: 10px;
+    fill: currentColor;
+    &:hover {@extend %animation;
+    color: var(--accent-color);}
+}
+
+.site-nav__link {
+    display: block;
+    position: relative;
+    @extend %animation;}
