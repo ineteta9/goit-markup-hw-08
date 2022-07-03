@@ -1,24 +1,42 @@
 .footer {
-    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
     background: var(--home-color);
 }
 
 .footer-common {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+.footer__block {
+    @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: baseline;
+        }
+    
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            padding-left: 76px;
+            padding-right: 89px;
+            justify-content: space-between;
+        }
 }
 
-.footer>.container>.footer__block {
-    display: inline-block;
-    width: 231px;
-}
-.logo--light {
-    color: var(--white-color);
-}
-.footer__logo {
-    margin-right: 84px;
+.footer__thumb {
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
 }
 
 .footer__contacts li {
@@ -44,20 +62,33 @@
 }
 
 .social {
-    width: 231px;
-    height: 44px;
-    margin-left: 70px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        margin-right: 93px;
+    }
     .social__list {
             display: flex;
             margin-top: 20px;
-        }
+            @media screen and (max-width: 1199px) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
                 .social__item {
                     @extend %align-list;
                     justify-content: center;
                     width: 44px;
                     height: 44px;
                 }
-                                .social__link {
+
+                                    .social__link {
                                     @extend %align-list;
                                     justify-content: center;
                                     width: 100%;
@@ -72,6 +103,8 @@
                                         fill: var(--white-color);
                                     }
                                 }
+
+            }
 }
 
 .social__item:not(:last-child) {

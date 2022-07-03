@@ -24,8 +24,8 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a href="index.html" class="logo header__logo">
-            <span class="logo__style">Web</span><span class="logo--dark">Studio</span>
+          <a href="index.html" class="logo">
+            <span class="logo__web">Web</span><span>Studio</span>
           </a>
           <ul class="site-nav">
             <li><a href="./index.html" class="site-nav__link">Студия</a></li>
@@ -49,17 +49,19 @@
         </ul>
       </div>
     </header>
+       <!--______FILTR__________-->
     <main>
       <section class="sections">
         <div class="container">
           <h1 hidden>Галерея</h1>
-          <ul class="menu-button">
-            <li><button type="button" class="menu-button__btn all-btn">Все</button></li>
-            <li><button type="button" class="menu-button__btn gal-btn web">Веб-сайты</button></li>
-            <li><button type="button" class="menu-button__btn gal-btn supple">Приложения</button></li>
-            <li><button type="button" class="menu-button__btn gal-btn design">Дизайн</button></li>
-            <li><button type="button" class="menu-button__btn gal-btn market">Маркетинг</button></li>
+          <ul class="filtr">
+            <li class="filtr__item"><button type="button" class="filtr__btn main-btn">Все</button></li>
+            <li class="filtr__item"><button type="button" class="filtr__btn gal-btn">Веб-сайты</button></li>
+            <li class="filtr__item"><button type="button" class="filtr__btn gal-btn">Приложения</button></li>
+            <li class="filtr__item"><button type="button" class="filtr__btn gal-btn">Дизайн</button></li>
+            <li class="filtr__item"><button type="button" class="filtr__btn gal-btn">Маркетинг</button></li>
           </ul>
+            <!--_____PORTFOLIO GALLERY______-->
           <ul class="elements">
             <li class="elements__item">
               <a href="./" class="elements__link">
@@ -196,41 +198,42 @@
    <footer class="footer">
     <div class="container footer-common">
       <div class="footer__block">
-        <a href="index.html" class="logo footer__logo">
-          <span class="logo__style">Web</span><span class="logo--light">Studio</span></a
-        >
-        <address class="footer__contacts">
-          <ul>
-            <li><a href="" target="_blank" class="footer__address">г. Киев, пр-т Леси Украинки, 26</a></li>
-            <li><a href="mailto:info@devstudio.com" class="footer__mail">info@devstudio.com</a></li>
-            <li><a href="tel:+380961111111" class="footer__tel">+380961111111</a></li>
+        <div class="footer__thumb">
+          <a href="index.html" class="logo logo--footer">
+            <span class="logo__web">Web</span><span>Studio</span></a>
+          <address class="footer__contacts">
+            <ul>
+              <li><a href="" target="_blank" class="footer__address">г. Киев, пр-т Леси Украинки, 26</a></li>
+              <li><a href="mailto:info@devstudio.com" class="footer__mail">info@devstudio.com</a></li>
+              <li><a href="tel:+380961111111" class="footer__tel">+380961111111</a></li>
+            </ul>
+          </address>
+        </div>
+        <div class="social">
+          <p class="social__text">ПРИСОЕДИНЯЙТЕСЬ</p>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="" class="social__link"><svg class="social-icon" width="20" height="20">
+                  <use href="./icons/symbol-defs.svg#icon-instagram"></use>
+                </svg></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link"><svg class="social-icon" width="20" height="20">
+                  <use href="./icons/symbol-defs.svg#icon-twitter"></use>
+                </svg></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link"><svg class="social-icon" width="20" height="20">
+                  <use href="./icons/symbol-defs.svg#icon-facebook"></use>
+                </svg></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link"><svg class="social-icon" width="20" height="20">
+                  <use href="./icons/symbol-defs.svg#icon-linkedin"></use>
+                </svg></a>
+            </li>
           </ul>
-        </address>
-      </div>
-      <div class="social">
-        <p class="social__text">ПРИСОЕДИНЯЙТЕСЬ</p>
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><svg class="social-icon" width="20" height="20">
-                <use href="./icons/symbol-defs.svg#icon-instagram"></use></svg></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><svg class="social-icon" width="20" height="20">
-                <use href="./icons/symbol-defs.svg#icon-twitter"></use></svg></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><svg class="social-icon" width="20" height="20">
-                <use href="./icons/symbol-defs.svg#icon-facebook"></use></svg></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><svg class="social-icon" width="20" height="20">
-                <use href="./icons/symbol-defs.svg#icon-linkedin"></use></svg></a>
-          </li>
-        </ul>
+        </div>
       </div>
       <div class="connect">
         <p class="connect__text">Подпишитесь на рассылку</p>

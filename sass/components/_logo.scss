@@ -1,0 +1,40 @@
+.logo,
+.logo--footer {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    @include font-text(24px, 700, 1.17, 0.03);
+    &:hover {
+        color: var(--accent-color);
+        @extend %animation;
+    }
+       
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}
+
+.logo {
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
+
+.logo__web {
+    color: var(--accent-color);
+}
+.logo--footer {
+    margin-bottom: 20px;
+    padding: 0;
+    color: var(--white-color);
+}

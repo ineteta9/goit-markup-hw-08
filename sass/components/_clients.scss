@@ -1,45 +1,93 @@
 .clients {
     background: var(--white-color);
-    font-size: 16px;
-    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    @media screen and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.17;
+        }
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 1.18;
+        }
 }
 
-.clients__item {
+.clients__list {
     align-content: center;
-    @media screen and (min-width: 768px) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
         }
-    .clients__list {
+                .clients__item {
+                        height: 92px;
+                        border: 1px solid #afb1b8;
+                        border-radius: 4px;
+                        background-color: var(--white-color);
+                    @media screen and (max-width: 767px) {
+                        flex-basis: calc((100% - 30px)/2);
+                            &:nth-child(odd) {
+                            margin-right: var(--card-set-gap);
+                            }
+                            &:not(:nth-last-child(-n + 2)) {
+                            margin-bottom: var(--card-set-gap);
+                            }
+                        }
+        
+                    @media screen and (min-width: 768px) {
+                        flex-basis: calc((100% - 60px)/3);
+                            &:not(:nth-child(3n)) {
+                            margin-right: var(--card-set-gap);
+                            }
+                            &:not(:nth-last-child(-n + 3)) {
+                            margin-bottom: var(--card-set-gap);
+                            }
+                        }
+        
+                    @media screen and (min-width: 1200px) {
+                        width: 170px;
+                            &:not(:last-child) {
+                            margin-right: var(--card-set-gap);
+                            }
+                        }
+                }
+}
+    /*.clients__item {
+            width: 170px;
             height: 92px;
             border: 1px solid #afb1b8;
             border-radius: 4px;
             background-color: var(--white-color);
-            @media screen and (min-width: 768px) and (max-width: 1199px) {width: 50%;
-                margin-bottom: var(--card-set-gap);}
-        }
-}
+            margin-bottom: var(--card-set-gap);}
+        }*/
 
-/*.clients__list {
-    width: 170px;
-    height: 92px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    background-color: var(--white-color);
 
-    @media screen and (min-width: 768px) and (max-width: 1399px) {
-        flex-basis: calc(100%/2);
-        margin-bottom: var(--card-set-gap);
+/*.clients__item {
+
+    @media screen and (max-width: 767px) {
+        flex-basis: calc((100% - 30px)/2);
+        &:nth-child(odd) {
+            margin-right: var(--card-set-gap);}
+
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: var(--card-set-gap);}
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 60px)/3);
+        &:not(:nth-child(3n)) {
+            margin-right: var(--card-set-gap);}
+
+        &:not(:nth-last-child(-n + 3)) {
+            margin-bottom: var(--card-set-gap);}
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+        &:not(:last-child) {
+            margin-right: var(--card-set-gap);}
     }
 }*/
-
-.clients__list:not(:last-child) {
-    @media screen and (max-width: 767px) {margin-bottom: var(--card-set-gap);}
-    @media screen and (min-width: 768px) {margin-right: var(--card-set-gap);}
-}
 
 .clients__link {
     width: 100%;

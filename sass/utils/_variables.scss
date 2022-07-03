@@ -25,12 +25,14 @@ body {
  }
 
 .hero__title {
-    width: 696px;
     margin: 0 auto;
     color: var(--white-color);
-    @include font-text(44px, 900, 1.36, 0.06);
+    @include font-text(42px, 900, 1.61, 0.06);
     text-align: center;
     text-transform: uppercase;
+    flex-shrink: 0;
+    @media screen and (min-width: 1200px) {
+        @include font-text(44px, 900, 1.36, 0.06);}
 }
 
 .about__title {
@@ -53,6 +55,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: var(--white-color);
+    flex-shrink: 0;
 }
 
 .details__title {
@@ -62,16 +65,27 @@ body {
     color: var(--title-text-color);
     @include font-text(14px, 700, 1.14, 0.03);
     text-transform: uppercase;
+    flex-shrink: 0;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+            text-align: left;
+        }
 }
 
 .team__title,
 .clients__title {
-    margin-bottom: 50px;
+    margin-bottom: var(--card-set-gap);
     margin-left: auto;
     margin-right: auto;
     color: var(--title-text-color);
-    @include font-text(36px, 700, 1.16, 0.03);
+    @include font-text(28px, 700, 1.18, 0.03);
     text-align: center;
+    flex-shrink: 0;
+    @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.17;
+        }
 }
 
 .master__person {
@@ -79,6 +93,7 @@ body {
     color: var(--title-text-color);
     @include font-text(16px, 500, 1.18, 0.03);
     text-align: center;
+    flex-shrink: 0;
 }
 
 .footer__contacts {
@@ -94,4 +109,5 @@ body {
     font-style: normal;
     @include font-text(14px, 700, 1.14, 0.03);
     text-transform: uppercase;
+    flex-shrink: 0;
 }
