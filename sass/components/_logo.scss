@@ -8,7 +8,7 @@
         @extend %animation;
     }
        
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         font-size: 26px;
         line-height: 1.19;
     }
@@ -19,12 +19,12 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         padding-top: 26px;
         padding-bottom: 26px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         padding-top: 24px;
         padding-bottom: 25px;
     }

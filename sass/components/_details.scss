@@ -30,7 +30,7 @@
             margin-bottom: var(--card-set-gap);}
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
         flex-basis: calc((100% - 30px)/2);
         &:nth-child(odd) {
             margin-right: var(--card-set-gap);}
@@ -38,7 +38,7 @@
             margin-bottom: 0;}
         }
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desktop) {
         width: 270px;
         &:not(:first-child) {
             margin-left: var(--card-set-gap);}

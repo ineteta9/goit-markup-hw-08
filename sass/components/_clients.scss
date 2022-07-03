@@ -6,7 +6,7 @@
         font-size: 14px;
         line-height: 1.17;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         font-size: 16px;
         line-height: 1.18;
         }
@@ -16,7 +16,7 @@
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             flex-wrap: nowrap;
         }
                 .clients__item {
@@ -34,7 +34,7 @@
                             }
                         }
         
-                    @media screen and (min-width: 768px) {
+                    @media screen and (min-width: $tablet) {
                         flex-basis: calc((100% - 60px)/3);
                             &:not(:nth-child(3n)) {
                             margin-right: var(--card-set-gap);
@@ -44,7 +44,7 @@
                             }
                         }
         
-                    @media screen and (min-width: 1200px) {
+                    @media screen and (min-width: $desktop) {
                         width: 170px;
                             &:not(:last-child) {
                             margin-right: var(--card-set-gap);
