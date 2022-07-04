@@ -21,34 +21,47 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     </head>
   <body>
-    <header class="header">
+    <header>
       <div class="container header__container">
-        <nav class="navigation">
-          <a href="index.html" class="logo">
-            <span class="logo__web">Web</span><span>Studio</span>
-          </a>
-          <ul class="site-nav">
-            <li><a href="./index.html" class="site-nav__link">Студия</a></li>
-            <li><a href="./portfolio.html" class="site-nav__link current">Портфолио</a></li>
-            <li><a href="/" class="site-nav__link">Контакты</a></li>
-          </ul>
+        <a href="index.html" class="logo">
+          <span class="logo__web">Web</span><span>Studio</span></a>
+        <nav class="nav">
+          <button type="button" class="btn-menu" aria-controls="nav-menu" data-menu-button aria-expanded="false">
+            <svg class="btn-menu__icon" aria-label="Переключатель мобільного меню">
+              <use class="btn-menu__icon--menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="btn-menu__icon--cross" href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <div class="nav-menu" id="nav-menu" data-menu>
+            <ul class="nav__list">
+              <li class="nav__item"><a href="./index.html" class="nav__link">Студия</a></li>
+              <li class="nav__item"><a href="./portfolio.html" class="nav__link current">Портфолио</a></li>
+              <li class="nav__item"><a href="/" class="nav__link">Контакты</a></li>
+            </ul>
+            <ul class="contakt">
+              <li class="cont__item">
+                <a href="mailto:info@devstudio.com" class="cont__link">
+                  <svg class="cont__icon" width="16" height="12">
+                    <use href="./icons/symbol-defs.svg#icon-envelope"></use>
+                  </svg>info@devstudio.com</a>
+              </li>
+              <li class="cont__item">
+                <a href="tel:+380961111111" class="cont__link cont__link--accent"><svg class="cont__icon" width="10"
+                    height="16">
+                    <use href="./icons/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>+380961111111</a>
+              </li>
+            </ul>
+            <ul class="nav__soc-sites">
+              <li class="nav__soc-item"><a href="" class="nav__soc-link">Instagram</a></li>
+              <li class="nav__soc-item"><a href="" class="nav__soc-link">Twitter</a></li>
+              <li class="nav__soc-item"><a href="" class="nav__soc-link">Facebook</a></li>
+              <li class="nav__soc-item"><a href="" class="nav__soc-link">LinkedIn</a></li>
+            </ul>
+          </div>
         </nav>
-        <ul class="contakt">
-          <li>
-            <a href="mailto:info@devstudio.com" class="list"
-              ><svg class="contakt__icon-mail" width="16" height="12">
-                <use href="./icons/symbol-defs.svg#icon-envelope"></use></svg>info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a href="tel:+380961111111"
-              ><svg class="contakt__icon-tel" width="10" height="16">
-                <use href="./icons/symbol-defs.svg#icon-smartphone"></use></svg>+380961111111</a
-            >
-          </li>
-        </ul>
       </div>
-    </header>
+    </header>     
        <!--______FILTR__________-->
     <main>
       <section class="sections">
@@ -66,7 +79,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                  <img src="./img-portfolio/people.jpg" alt="люди" width="370" height="294" />
+                  <img srcset="./img-portfolio/img.jpg 1x, ./img-portfolio/img2x.jpg 2x" src="./img-portfolio/img.jpg" alt="люди" width="370" height="294" />
                   <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                     или частном лице.</p>
@@ -80,7 +93,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/basketball.jpg" alt="баскет" width="370" height="294" />
+                <img srcset="./img-portfolio/basket.jpg 1x, ./img-portfolio/basket2x.jpg 2x" src="./img-portfolio/basket.jpg" alt="баскет" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
@@ -96,7 +109,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/seafood.jpg" alt="ресторан" width="370" height="294" />
+                <img srcset="./img-portfolio/seafood.jpg 1x, ./img-portfolio/seafood2x.jpg 2x" src="./img-portfolio/seafood.jpg" alt="ресторан" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                 сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                 или частном лице.</p>
@@ -110,7 +123,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/earphones.jpg" alt="наушники" width="370" height="294" />
+                <img srcset="./img-portfolio/music.jpg 1x, ./img-portfolio/music2x.jpg 2x" src="./img-portfolio/music.jpg" alt="наушники" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
@@ -124,7 +137,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/box.jpg" alt="коробки" width="370" height="294" />
+                <img srcset="./img-portfolio/boxes.jpg 1x, ./img-portfolio/boxes2x.jpg 2x" src="./img-portfolio/boxes.jpg" alt="коробки" width="370" height="294" />
                 <p class="thumbs__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
@@ -138,7 +151,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/map.jpg" alt="карта" width="370" height="294" />
+                <img ssrcset="./img-portfolio/display.jpg 1x, ./img-portfolio/display2x.jpg 2x" src="./img-portfolio/display.jpg" alt="монитор" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
@@ -152,7 +165,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/book.jpg" alt="книга" width="370" height="294" />
+                <img srcset="./img-portfolio/design.jpg 1x, ./img-portfolio/design2x.jpg 2x" src="./img-portfolio/design.jpg" alt="книга" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
@@ -166,7 +179,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/label.jpg" alt="уровень" width="370" height="294" />
+                <img srcset="./img-portfolio/project.jpg 1x, ./img-portfolio/project2x.jpg 2x" src="./img-portfolio/project.jpg" alt="уровень" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
@@ -180,7 +193,7 @@
             <li class="elements__item">
               <a href="./" class="elements__link">
                 <div class="thumb">
-                <img src="./img-portfolio/note.jpg" alt="ноут" width="370" height="294" />
+                <img srcset="./img-portfolio/note_.jpg 1x, ./img-portfolio/note2x.jpg 2x" src="./img-portfolio/note_.jpg" alt="ноут" width="370" height="294" />
                 <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
                   или частном лице.</p>
