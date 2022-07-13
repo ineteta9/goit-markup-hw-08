@@ -100,6 +100,23 @@ header {
         color: var(--accent-color);
     }
 }
+.current {color: var(--accent-color);
+    @extend %animation;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: #2196f3;
+        border-radius: 2px;
+        position: absolute;
+        bottom: -1.5px;
+        opacity: 1;
+        transition-property: transform background opacity;
+        @extend %animation;
+        transform: scaleX(1);
+    }}
 
 .contakt {
     @media screen and (max-width: 767px) {

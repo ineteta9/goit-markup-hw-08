@@ -246,7 +246,7 @@ img {
 }
 
 .thumb__text, .filtr__btn, .logo:hover,
-.logo--footer:hover, .cont__link, .nav__link, .backdrop.is-hidden .modal, .modal, .backdrop {
+.logo--footer:hover, .cont__link, .current::after, .current, .nav__link, .backdrop.is-hidden .modal, .modal, .backdrop {
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -599,6 +599,23 @@ header {
   color: var(--accent-color);
 }
 
+.current {
+  color: var(--accent-color);
+}
+.current::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #2196f3;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -1.5px;
+  opacity: 1;
+  transition-property: transform background opacity;
+  transform: scaleX(1);
+}
+
 @media screen and (max-width: 767px) {
   .contakt {
     display: flex;
@@ -879,6 +896,10 @@ header {
 
 .logo__web {
   color: var(--accent-color);
+}
+
+.logo--header {
+  color: var(--title-text-color);
 }
 
 .logo--footer {
